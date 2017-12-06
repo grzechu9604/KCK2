@@ -1,13 +1,2 @@
-﻿  source.cpp
-c:\users\grzegorz\desktop\kck clear\project1\project1\project1\source.cpp(44): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
-c:\users\grzegorz\desktop\kck clear\project1\project1\project1\source.cpp(61): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
-c:\users\grzegorz\desktop\kck clear\project1\project1\project1\source.cpp(140): warning C4305: "+=": obcięcie z "double" do "float"
-c:\users\grzegorz\desktop\kck clear\project1\project1\project1\source.cpp(141): warning C4305: "-=": obcięcie z "double" do "float"
-c:\users\grzegorz\desktop\kck clear\project1\project1\project1\source.cpp(143): warning C4305: "+=": obcięcie z "double" do "float"
-c:\users\grzegorz\desktop\kck clear\project1\project1\project1\source.cpp(144): warning C4305: "-=": obcięcie z "double" do "float"
-c:\users\grzegorz\desktop\kck clear\project1\project1\project1\source.cpp(146): warning C4305: "+=": obcięcie z "double" do "float"
-c:\users\grzegorz\desktop\kck clear\project1\project1\project1\source.cpp(147): warning C4305: "-=": obcięcie z "double" do "float"
-c:\users\grzegorz\desktop\kck clear\project1\project1\project1\source.cpp(149): warning C4305: "+=": obcięcie z "double" do "float"
-c:\users\grzegorz\desktop\kck clear\project1\project1\project1\source.cpp(150): warning C4305: "-=": obcięcie z "double" do "float"
-c:\users\grzegorz\desktop\kck clear\project1\project1\project1\source.cpp(198): warning C4267: "=": konwersja z "size_t" do "int", możliwa utrata danych
+﻿  DrawableKeyPoint.cpp
   Project1.vcxproj -> C:\Users\Grzegorz\Desktop\KCK clear\Project1\Project1\x64\Debug\Project1.exe

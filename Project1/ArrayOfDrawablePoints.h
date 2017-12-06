@@ -11,12 +11,12 @@ class ArrayOfDrawablePoints
 public:
 	ArrayOfDrawablePoints();
 	~ArrayOfDrawablePoints();
-	void RefreshArray(vector<KeyPoint> t);
-	vector<KeyPoint> GetDrawablePoints();
-	DrawableKeyPoint * GetMatchingKeyPoint(KeyPoint k);
+	void RefreshArray(vector<Vec3f> t);
+	vector<Vec3f> GetDrawablePoints();
+	DrawableKeyPoint * GetMatchingKeyPoint(Vec3f k);
 private:
 	vector<DrawableKeyPoint> array;
-	static const int incrementer = 2;
+	static const int incrementer = 3;
 	static const int decrementer = -1;
 
 };

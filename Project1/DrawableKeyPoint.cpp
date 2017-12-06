@@ -2,10 +2,10 @@
 
 
 
-DrawableKeyPoint::DrawableKeyPoint(KeyPoint k)
+DrawableKeyPoint::DrawableKeyPoint(Vec3f k)
 {
 	this->keyPoint = k;
-	this->rate = 0;
+	this->rate = 3;
 }
 
 
@@ -13,9 +13,9 @@ DrawableKeyPoint::~DrawableKeyPoint()
 {
 }
 
-bool DrawableKeyPoint::IsTheSameKeypoint(KeyPoint k)
+bool DrawableKeyPoint::IsTheSameKeypoint(Vec3f k)
 {
-	return abs(k.pt.x - this->keyPoint.pt.x) <= delta && abs(k.pt.y - this->keyPoint.pt.y) <= delta;
+	return abs(k[0] - this->keyPoint[0]) <= delta && abs(k[1] - this->keyPoint[1]) <= delta;
 }
 
 bool DrawableKeyPoint::IsDrawable()
@@ -23,7 +23,7 @@ bool DrawableKeyPoint::IsDrawable()
 	return this->rate > this->minimalRate;
 }
 
-void DrawableKeyPoint::RefreshRate(vector<KeyPoint> keyPoints)
+void DrawableKeyPoint::RefreshRate(vector<Vec3f> keyPoints)
 {
 	for (int i = 0; i < keyPoints.size(); i++)
 	{

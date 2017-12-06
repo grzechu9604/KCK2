@@ -11,7 +11,7 @@ ArrayOfDrawablePoints::~ArrayOfDrawablePoints()
 {
 }
 
-void ArrayOfDrawablePoints::RefreshArray(vector<KeyPoint> t)
+void ArrayOfDrawablePoints::RefreshArray(vector<Vec3f> t)
 {
 	for (int tCounter = 0; tCounter < t.size(); tCounter++)
 	{
@@ -28,7 +28,7 @@ void ArrayOfDrawablePoints::RefreshArray(vector<KeyPoint> t)
 	{
 		this->array[i].IncrementRateBy(this->decrementer);
 		
-		if (this->array[i].GetRate() < 0)
+		if (this->array[i].GetRate() == 0)
 		{
 			this->array.erase(array.begin() + i);
 			i--;
@@ -36,9 +36,9 @@ void ArrayOfDrawablePoints::RefreshArray(vector<KeyPoint> t)
 	}
 }
 
-vector<KeyPoint> ArrayOfDrawablePoints::GetDrawablePoints()
+vector<Vec3f> ArrayOfDrawablePoints::GetDrawablePoints()
 {
-	vector<KeyPoint> result;
+	vector<Vec3f> result;
 	for (int i = 0; i < this->array.size(); i++)
 	{
 		if (this->array[i].IsDrawable())
@@ -47,7 +47,7 @@ vector<KeyPoint> ArrayOfDrawablePoints::GetDrawablePoints()
 	return result;
 }
 
-DrawableKeyPoint * ArrayOfDrawablePoints::GetMatchingKeyPoint(KeyPoint k)
+DrawableKeyPoint * ArrayOfDrawablePoints::GetMatchingKeyPoint(Vec3f k)
 {
 	for (int i = 0; i < this->array.size(); i++)
 	{

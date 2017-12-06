@@ -10,15 +10,15 @@ using namespace std;
 class DrawableKeyPoint
 {
 public:
-	DrawableKeyPoint(KeyPoint k);
+	DrawableKeyPoint(Vec3f k);
 	~DrawableKeyPoint();
-	const static int delta = 2;
-	const static int minimalRate = 5;
-	const static int maxRate = 10;
-	bool IsTheSameKeypoint(KeyPoint k);
+	const static int delta = 7;
+	const static int minimalRate = 6;
+	const static int maxRate = 15;
+	bool IsTheSameKeypoint(Vec3f k);
 	bool IsDrawable();
-	void RefreshRate(vector<KeyPoint> keyPoints);
-	KeyPoint keyPoint;
+	void RefreshRate(vector<Vec3f> keyPoints);
+	Vec3f keyPoint;
 	void IncrementRateBy(int value);
 	int GetRate();
 private:
